@@ -1,16 +1,20 @@
 /* @jsx createElement */
 import { createDom, createElement, render } from "./react";
 
-function Title() {
-    return <h1>React 만들기</h1>;
+function Title(props) {
+    return <h1>{props.children}</h1>;
+}
+
+function Item(props) {
+    return <li style={`color: ${props.color}`}>{props.children}</li>
 }
 
 const vdom = <p>
-    <Title></Title>
+    <Title>리액트 잘 만들기</Title>
     <ul>
-        <li style="color: red">첫번째 아이템</li>
-        <li style="color: blue">두번째 아이템</li>
-        <li style="color: green">세번째 아이템</li>
+        <Item color="red">첫번째 아이템</Item>
+        <Item color="blue">두번째 아이템</Item>
+        <Item color="green">세번째 아이템</Item>
     </ul>
 </p>
 
