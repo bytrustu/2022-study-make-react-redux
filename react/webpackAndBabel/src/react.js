@@ -15,7 +15,8 @@ export function createDom(node) {
     return element;
 }
 
-export function createElement(tag = 'div', props, ...children) {
+export function createElement(tag, props, ...children) {
+    props = props || {};
     return { tag, props, children }
 }
 
