@@ -9,7 +9,7 @@ function Item(props) {
     return <li style={`color: ${props.color}`}>{props.children}</li>
 }
 
-const vdom = <p>
+const App = () => <p>
     <Title>리액트 잘 만들기</Title>
     <ul>
         <Item color="red">첫번째 아이템</Item>
@@ -18,4 +18,4 @@ const vdom = <p>
     </ul>
 </p>
 
-render(vdom, document.querySelector('#root'));
+render(<App />, document.querySelector('#root'));
